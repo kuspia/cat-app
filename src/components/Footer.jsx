@@ -15,7 +15,7 @@ export const Footer = () => {
           <a href="/" className="d-flex align-items-center p-0 text-dark">
             <img
               alt="logo"
-              src={require(`./1.png`).default} alt="Note"
+              src= {require(`./1.png`)}
               width="30px"
             />
             <span className="ml-4 h5 mb-0 font-weight-bold"></span>
