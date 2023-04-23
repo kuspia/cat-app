@@ -15,7 +15,7 @@ export const Footer = () => {
           <a href="/" className="d-flex align-items-center p-0 text-dark">
             <img
               alt="logo"
-              src="https://raw.githubusercontent.com/kuspia/cat-app/master/1.png"
+              src="https://drive.google.com/file/d/1PBqcBv16rt4pcC7ghRzFAhG26Hejclg8/view?usp=share_link"
               width="30px"
             />
             <span className="ml-4 h5 mb-0 font-weight-bold"></span>
