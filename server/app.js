@@ -7,6 +7,9 @@ const path = require('path')
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.static(buildPath));
 
+const buildPath1 = path.join(__dirname);
+app.use(express.static(buildPath1));
+
 const bodyparser = require("body-parser")
 app.use(bodyparser.urlencoded({extended:false}))
 
