@@ -95,7 +95,15 @@ app.get("/", (req, res) => {
 
 });
 
+app.get('/healthcheck', (req, res) => {
+	res.status(200).send('OK');
+});
 
+app.get('/ping', (req, res) => {
+	ipAddresses = req.headers['x-forwarded-for'] || req.connection.remoteAddress
+	console.log("WakeUP <--", ipAddresses) 
+	res.sendStatus(200);
+});
 
 // Danger ZONEEEEEEEEEEE  <><<Meant to be used during productions>><>
 app.get("/dropme524626t22525dsgste5rwt45rtseszq5q3qtaegsgs", (req, res) => {
