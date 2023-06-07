@@ -7,6 +7,9 @@ const path = require('path')
 const buildPath = path.join(__dirname, '..', 'build');
 app.use(express.static(buildPath));
 
+const healthcheckRouter = require('./healthcheck');
+app.use('/healthcheck', healthcheckRouter);
+
 const buildPath1 = path.join(__dirname);
 app.use(express.static(buildPath1));
 
@@ -108,6 +111,11 @@ app.get("/dropme524626t22525dsgste5rwt45rtseszq5q3qtaegsgs", (req, res) => {
 
    const PORT = process.env.PORT || 5000;
 
+app.get('/ping', (req, res) => {
+ipAddresses = req.headers['x-forwarded-for'] || req.connection.remoteAddress
+console.log("WakeUP <--", ipAddresses) 
+res.sendStatus(200);
+});
 
 app.listen(PORT, () => {
 	console.log("Server started on port 5000");
